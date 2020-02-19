@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+\usepackage{color}
+\usepackage{amsmath,amsthm,amssymb,multirow,paralist}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{geometry}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newgeometry{vmargin={10mm}, hmargin={12mm,17mm}}   % set the margins
+
+\begin{document}
+
+\begin{enumerate}
+
+\item \textbf{Solution 1 = }
+Column space of a matrix is equal to span of the columns of the matrix.
+Lets begin with A.
+\\*  Reduced echelon form of matrix A, calculating with (2*R2 - R1),  A = 
+$
+\begin{pmatrix}
+1&2\\
+0&0\\
+\end{pmatrix}
+$
+\\* So it has just one pivot element. So column space of the A consist of vector  C(A) = c 
+$
+\begin  {pmatrix}
+1\\
+0\\
+\end{pmatrix}
+$
+, c$\in$R
+\\* The same way with matrix B , it has 2 pivot elements 1 and 4 . So we use these columns for the column spaces of the matrix B.  C(B) = c $
+\begin  {pmatrix}
+1\\
+0\\
+\end{pmatrix}
+$ + d  $
+\begin  {pmatrix}
+3\\
+4\\
+\end{pmatrix}
+$ , c,d$\in$R . We can write this expression \\*C(B) = $ \begin  {pmatrix}
+1&3\\
+0&4\\
+\end{pmatrix}
+$
+$
+\begin  {pmatrix}
+c\\
+d\\
+\end{pmatrix}
+$
+\item 
+\begin{itemize}
+    \item \textbf{Solution 2(a) = } We can write the equation \textbf{ax+by+cz=0} , for each plane in three dimension through the origin. So that the equation can be written in matrix form Ax = 0. where A = $
+\begin  {pmatrix}
+a&b&c\\
+
+\end{pmatrix}
+$,  x =  $
+\begin  {pmatrix}
+x\\
+y\\
+z\\
+\end{pmatrix}
+$ and the plane is \{ x$\in$$R^{3}$ ,  Ax = 0 \} This plane is the definition of the null space of this matrix A. The nullspace of a matrix is always a subspace, we can say this plane is a subspace of $R^{3}$. So, every plane in $R^{3}$  through the (0 , 0 , 0) is a subspace of $R^{3}$ .
+    \item \textbf{Solution 2(b) = } The quarter plane is not a subspace. We can disprove that with only one counter example. 
+    \\* The vector  $
+\begin  {pmatrix}
+4\\
+5\\
+\end{pmatrix}
+$  is included but multiplying this vector by some constant let say c = -1 , the vector  $
+\begin  {pmatrix}
+-4\\
+-5\\
+\end{pmatrix}
+$ is not included.
+\end{itemize}
+
+
+\item 
+\begin{itemize}
+    \item \textbf{Solution 3(a) = } We can say these vectors form an orthogonal set under the standart Euclidean inner product, if every pair of vector is orthogonal. So we have to check the dot product of each pair. $\vec{v_1}$ . $\vec{v_2}$ = 0 , $\vec{v_1}$. $\vec{v_3}$= 0 , $\vec{v_2}$ . $\vec{v_3}$ = 0 
+    \\* We can easily see that all dot products are zero . So These vectors form an orthogonal set. But not orthonormal. Since  $v_1$ and $v_3$ are not of magnitude 1. 
+    \item \textbf{Solution 3(b):} We turn these vectors orthonormal by normalizing. 
+    \\* $\vec{u_1}$ =  $\vec{v_1}$  / $\mid \vec{v_1} $ $\mid$ = (1/$\sqrt{5}$) * 
+$\begin  {pmatrix}
+-2&0&1\\
+\end{pmatrix}
+$      (where $\mid \vec{v_1} $ $\mid$ = $\sqrt{5}$ )
+    \\* $\vec{u_2}$ =  $\vec{v_2}$ / $\mid \vec{v_2} $ $\mid$ = $\begin  {pmatrix}
+0&1&0\\
+\end{pmatrix}
+$  (where $\mid \vec{v_2} $ $\mid$ = 1 )
+    \\* $\vec{u_3}$ =  $\vec{v_3}$ / $\mid \vec{v_3} $ $\mid$ = (1/(2$\sqrt{5}$)) * 
+    $\begin  {pmatrix}
+2&0&4\\
+\end{pmatrix}
+$  (where $\mid \vec{v_3} $ $\mid$ = 2$\sqrt{5}$) )
+\\* The set of vectors $\vec{u_1}$ $\vec{u_2}$ $\vec{u_3}$ is orthonormal.
+
+\end{itemize}
+
+
+\item  \textbf{Solution 4 = }  x is just simply (m x 1) matrix , y is  (n x 1) matrix. \\* Transpose of y is $y^{T}$ is (1 x n) matrix. x$y^{T}$ is (m x n) matrix. \\*
+Suppose A = x$y^{T}$. if u$\in$$R^{n}$ , we can say Au = x$y^{T}$u = (u.y)x. (The dot product of u and y) So,  matrix A maps every vector in $R^{m}$ to a scalar multiple of y, We can conclude that rank(A) = 1
+ \\*
+\item \textbf{Solution 5 = } We know that X is (m x n) dimensions and $Y^{T}$ is (p x n) dimensions. We also know that the transpose of the $Y^{T}$ is just simply equal to Y with (n x p ) dimensions. \\*X has the form $\begin  {pmatrix}
+{x_1}&{x_2}&...&{x_n}\\
+...&...&...&...\\
+...&...&...&...\\
+...&...&...&...\\ 
+\end{pmatrix}
+$ with m rows. \\*
+$Y^{T}$ has the form $\begin  {pmatrix}
+y^{1}&y^{2}&...&y^{n}\\
+...&...&...&...\\
+...&...&...&...\\
+...&...&...&...\\ 
+\end{pmatrix}
+$ with p rows. \\*
+
+Y has the form $\begin  {pmatrix}
+y^{1}&...&...&...\\
+y^{2}&...&...&...\\
+...&...&...&...\\
+y^{n}&...&...&...\\ 
+\end{pmatrix}
+$ with p columns. \\*
+
+Let say K = XY , For the first row, first column of K,  we take the first column of X and first row of the Y
+and multiply them with matrix multiplication. For the first row , second column of K, we take the second column of X  and first row of Y.  For other elements it goes so on and on. (m x n) and (n x p) is also satisfied. So the equation holds.
+
+
+\item \textbf{Solution 6 = } We know that transpose of ($\vec{X}^{T}$) is just equal to $\vec{X}$. And also know \\* $(XY)^{T}$ = $Y^{T}$$X^{T}$. Let say C = $X^{T}$, Take the transpose of $(CX)^{T}$. The solution will be $X^{T}$$C^{T}$. Replace C with the $X^{T}$ .Then the transpose of $(X^{T}$X) = $X^{T}$X. So it is symmetric.
+\\*For any column vector $\vec{v}$,  $\vec{v}^{T}$$\vec{X}^{T}$$\vec{X}$$\vec{v}$ is equal to $(Xv)^{T}$$(Xv)$ = $(Xv)$.$(Xv)$ $\geq$ 0. So, $\vec{X}^{T}$$\vec{X}$ is positive semi-finite. \\*In addition to that, If X is a nonsingular matrix, then $\vec{X}^{T}$$\vec{X}$ is positive definite.
+
+\item 
+\begin{itemize}
+    \item  \textbf{Solution 7(a) = } We know that if the rank of the matrix is smaller than n , there has to be a zero line in the matrix. So determinant of the matrix is 0. Also know that if the determinant is zero , the matrix has no inverse (singular). Clearly seen the equality of c , we cannot calculate c.
+    \item  \textbf{Solution 7(b) = } We know from the part(a) that determinant of the matrix is 0. This means that one or more eigenvalues of the matrix is zero. Since the product of eigenvalues of the matrix gives us the determinant. We want to solve this problem with adding identity matrix. Adding identity matrix changes the values of eigenvalues.  If we change the value of zero eigenvalues properly, new determinant value doesn't have to be zero. Depends on the eigenvalues, we can come up with a solution to solve that. But it is not guarantee. 
+\end{itemize} 
+
+\item  \textbf{Solution 8 = } We know that ${argmin_x} $ returns the input value for the possible minumum output value. From the equation x$\in$$\Omega$=N 
+\\* After solving l2 norm , we found that $x^{*}$ = min $\mid$x-1.1$\mid$  where x$\in$N. For the minumum value of  $x^{*}$, x must be equal to \textbf{1} . Thus $x^{*}$ = 0.1
+
+\end{enumerate}
+
+\end{document}
